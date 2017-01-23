@@ -4,23 +4,23 @@ variable "aws_region" {
   default = "ca-central-1"
 }
 
-variable "availability_zones" {
-  default =  [
-    "ca-central-1a",
-    "ca-central-1b"
-  ]
+variable "availability_zone" {
+  default = "ca-central-1a"
 }
 
 variable "port" {
   default = 6379
 }
 
+variable "engine_version" {
+  default = "2.8.24"
+}
 variable "node_type" {
-  default = "cache.m3.medium"
+  default = "cache.m4.large"
 }
 
 variable "num_cache_nodes" {
-  default = 2
+  default = 1
 }
 
 variable "security_group_ids" {

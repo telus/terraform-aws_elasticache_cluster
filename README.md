@@ -8,10 +8,11 @@ A terraform module for managing EC instances running Redis
 
 Defaults:
 
-- `node_type` - The EC instance type, defaults to cache.m3.medium
-- `availability_zones` - The availability zones your node will launch into. Defaults to ca-central-1a and ca-central-1b
+- `engine_version` - The Redis version you want to use. Defaults to 2.8.24
+- `node_type` - The EC instance type, defaults to cache.m4.large
+- `availability_zone` - The availability zones your node will launch into. Defaults to ca-central-1a
 - `port` - EC port. Defaults to 6379
-- `num_cache_nodes` - Number of nodes wanted for cluster. Defaults to 2
+- `num_cache_nodes` - Number of nodes wanted for cluster. Defaults to 1
 - `security_group_ids` - Security group ID for cluster.
 - `subnet_group_name` Subnet group name for cluster.
 - `parameter_group_name` Parameter group name for cluster. Defaults to default.redis2.8
@@ -24,6 +25,21 @@ Required:
 
 - `primary_endpoint` - The endpoint for the EC node
 - `instance_name` - Name of the instance
+
+# Usage
+
+You can use this in your terraform template with the following steps.
+
+1. Adding a module resource to your template, e.g. main.tf
+
+```
+module "instance" {
+  source = "git::ssh://git@github.com/telusdigital/terraform-ec_instance"
+
+  cluster_id = "my-cluster"
+  node_type = "cache.m4.large"
+}
+```
 
 # Authors
 

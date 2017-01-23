@@ -1,6 +1,6 @@
 # terraform-ec_instance
 
-A terraform module for managing EC instances running Redis
+A terraform module for managing Elasticache instances running Redis
 
 * Assumes you're making your instances in a VPC
 
@@ -9,9 +9,9 @@ A terraform module for managing EC instances running Redis
 Defaults:
 
 - `engine_version` - The Redis version you want to use. Defaults to 2.8.24
-- `node_type` - The EC instance type, defaults to cache.m4.large
+- `node_type` - The Elasticache instance type, defaults to cache.m4.large
 - `availability_zone` - The availability zones your node will launch into. Defaults to ca-central-1a
-- `port` - EC port. Defaults to 6379
+- `port` - Elasticache port. Defaults to 6379
 - `num_cache_nodes` - Number of nodes wanted for cluster. Defaults to 1
 - `security_group_ids` - Security group ID for cluster.
 - `subnet_group_name` Subnet group name for cluster.
@@ -19,11 +19,11 @@ Defaults:
 
 Required:
 
-- `cluster_id` - Name of the EC instance
+- `cluster_id` - Name of the Elasticache instance
 
 # Module Outputs
 
-- `primary_endpoint` - The endpoint for the EC node
+- `primary_endpoint` - The endpoint for the Elasticache node
 - `instance_name` - Name of the instance
 
 # Usage

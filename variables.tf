@@ -33,12 +33,10 @@ variable "num_cache_nodes" {
 
 variable "security_group_ids" {
   description = "The security_group ids to attach the instance to"
-  #default = "sg-1fec2e76"
 }
 
 variable "subnet_group_name" {
   description = "The subnet to launch the instance into"
-  #default = "openshift-sandbox"
 }
 
 variable "parameter_group_name" {

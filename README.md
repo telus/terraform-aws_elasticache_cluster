@@ -1,4 +1,4 @@
-# terraform-ec_instance
+# terraform-aws_elasticache_cluster
 
 A terraform module for managing Elasticache instances running Redis
 
@@ -34,7 +34,7 @@ You can use this in your terraform template with the following steps.
 
 ```
 module "instance" {
-  source = "git::ssh://git@github.com/telusdigital/terraform-ec_instance"
+  source = "git::ssh://git@github.com/telusdigital/terraform-aws_elasticache_cluster"
 
   cluster_id = "my-cluster"
   node_type = "cache.m4.large"

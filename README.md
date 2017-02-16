@@ -23,7 +23,7 @@ Required:
 
 # Module Outputs
 
-- `primary_endpoint` - The endpoint for the Elasticache node
+- `instance_primary_endpoint` - The endpoint for the Elasticache node
 - `instance_name` - Name of the instance
 
 # Usage

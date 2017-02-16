@@ -1,5 +1,5 @@
-output "instance_primary_endpoint" {
-  value = "${aws_elasticache_cluster.default.primary_endpoint}"
+output "cache_nodes" {
+  value = "${aws_elasticache_cluster.default.cache_nodes}"
 }
 
 output "instance_name" {

@@ -42,3 +42,11 @@ variable "subnet_group_name" {
 variable "parameter_group_name" {
   default = "default.redis2.8"
 }
+
+variable "name" {
+  default = ""
+}
+
+variable "environment" {
+  default = ""
+}

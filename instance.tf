@@ -10,6 +10,6 @@ resource "aws_elasticache_cluster" "default" {
   subnet_group_name = "${var.subnet_group_name}"
   parameter_group_name = "${var.parameter_group_name}"
   tags = {
-    Name = "${var.name}-${var.environment}"
+    Name = "${var.name}"
   }
 }

@@ -44,5 +44,5 @@ variable "parameter_group_name" {
 }
 
 variable "name" {
-  default = ""
+  description = "Cluster Name"
 }

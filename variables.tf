@@ -46,4 +46,9 @@ variable "parameter_group_name" {
 variable "name" {
   description = "Cluster Name"
   default     = ""
+
+  validation {
+    condition     = can(regex("[a-zA-Z][a-zA-Z0-9]*", var.name))
+    error_message = "DBName must begin with a letter and contain only alphanumeric characters."
+  }
 }

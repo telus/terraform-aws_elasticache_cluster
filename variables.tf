@@ -47,3 +47,32 @@ variable "name" {
   description = "Cluster Name"
   default     = ""
 }
+
+variable "alarm_threshold_cpu" {
+  description = "Threshold for cpu alarm in %"
+  type        = number
+  default     = 80
+}
+
+variable "alarm_threshold_memory" {
+  description = "Memory in percent"
+  type        = number
+  default     = 80
+}
+
+variable "alarm_threshold_evictions" {
+  description = "Threshold for evictions alarm"
+  type        = number
+  default     = 0
+}
+
+variable "alarm_threshold_swap" {
+  description = "Threshold for swap alarm"
+  type        = number
+  default     = 0
+}
+
+variable "alarm_sns_topic" {
+  description = "SNS Topic used for alarms"
+  default     = "arn:aws:sns:ca-central-1:202758669767:db_alarms" # Configured in DataVPC repo: https://github.com/telus/terraform-openshift-datavpc-main/blob/master/aws-sns-alarms.tf
+}

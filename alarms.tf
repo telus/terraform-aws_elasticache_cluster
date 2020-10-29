@@ -2,7 +2,7 @@ resource "aws_cloudwatch_metric_alarm" "elasticache_alarm_cpu" {
   count               = var.num_cache_nodes
   alarm_name          = "elasticache-alarm-cpu-${var.cluster_id}-00${count.index + 1}"
   comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
+  evaluation_periods  = 2
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ElastiCache"
   period              = 60
@@ -23,7 +23,7 @@ resource "aws_cloudwatch_metric_alarm" "elasticache_alarm_memory" {
   count               = var.num_cache_nodes
   alarm_name          = "elasticache-alarm-memory-${var.cluster_id}-00${count.index + 1}"
   comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
+  evaluation_periods  = 2
   metric_name         = "DatabaseMemoryUsagePercentage"
   namespace           = "AWS/ElastiCache"
   period              = 60

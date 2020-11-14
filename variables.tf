@@ -69,7 +69,7 @@ variable "alarm_threshold_evictions" {
 variable "alarm_threshold_swap" {
   description = "Threshold for swap alarm"
   type        = number
-  default     = 0
+  default     = 419430400 # 40MB, 80% of recommended 50MB limit
 }
 
 variable "alarm_sns_topic" {
